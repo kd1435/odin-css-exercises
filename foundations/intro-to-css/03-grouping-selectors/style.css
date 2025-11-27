@@ -1,1 +1,15 @@
 /* Add CSS Styling */
+.yes-me {
+  background-color: black;
+  color: white;
+}
+
+.no-me {
+  background-color: yellow;
+}
+
+.yes-me,
+.no-me {
+  font-size: 28px;
+  font-family: Helvetica, 'Times New Roman', sans-serif;
+}
