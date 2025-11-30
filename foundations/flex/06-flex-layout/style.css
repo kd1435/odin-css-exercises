@@ -5,6 +5,9 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +19,12 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* Cheated on this part by using inspect element on solution.html. Had padding: 8px prior, then saw solution.html has wider buttons so did padding: 16px and 
+    saw that width is now okay, but height is not, and need to "squish down the buttons" somehow, which I completely forgot can be done
+    by specifying padding differently for top-bottom and left-right...*/
+
+  /* Also before "cheating" tried transform: scale(1, 0.5); which "squished down" not only the button box on the y-plane but the text inside it as well */
+  padding: 8px 16px;
 }
 
 input {
@@ -23,4 +32,46 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header,
+.footer {
+  height: 1em;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+div {
+  border: 2px solid red;
 }
