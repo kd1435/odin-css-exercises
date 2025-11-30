@@ -10,6 +10,8 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 /* do not edit this footer */
@@ -23,4 +25,29 @@ img {
   align-items: center;
   justify-content: center;
   background: #eee;
+}
+
+.plants {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.plant1,
+.plant2,
+.plant3,
+.plant4 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Solution uses max-width: 200px instead. With my use of this flex property, when there's an unbreakable line of text
+       that's large enough to make min-content higher than flex-basis, 
+       the container will stretch instead of overflowing and maintaining a unified width structure */
+  flex: 0 1 200px;
+  justify-content: center;
+  align-content: baseline;
+}
+
+/* apparently you can make the whole body text-align: center and deeply nested children inherit that property */
+.text {
+  text-align: center;
 }
